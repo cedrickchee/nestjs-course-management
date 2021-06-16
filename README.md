@@ -45,6 +45,19 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Running the MongoDB database
+
+First, install Docker Compose.
+
+```bash
+$ cd docker
+$ docker-compose up
+```
+
+We're using Docker volume for persisting MongoDB data.
+When the container runs, Docker will create a `data` directory where we store
+our MongoDB data.
+
 ## Test
 
 ```bash
