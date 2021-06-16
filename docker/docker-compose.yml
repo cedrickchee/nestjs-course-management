@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  mongodb:
+    image: mongo:4.4.6
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - 27017-27019:27017-27019
+    volumes:
+      - ./data:/data/db
