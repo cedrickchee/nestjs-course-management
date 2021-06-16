@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Lesson } from './lesson/lesson.entity';
 import { LessonModule } from './lesson/lesson.module';
+import { Student } from './student/student.entity';
 import { StudentModule } from './student/student.module';
 
 @Module({
@@ -15,7 +16,7 @@ import { StudentModule } from './student/student.module';
       // All I know is that you need to set it true right now due to
       // some deprecation that is about to happen in the future.
       useUnifiedTopology: true,
-      entities: [Lesson],
+      entities: [Lesson, Student],
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
